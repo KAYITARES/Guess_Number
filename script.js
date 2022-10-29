@@ -15,7 +15,7 @@ document.querySelector('.check').addEventListener('click', () => {
   //when there is no input number
   if (!inputNumber) {
     // document.querySelector('.message').textContent = '⛔ No Number';
-    displayMessage('⛔ No Number');
+    displayMessage('⛔ No Number Provided!');
   }
   // when we win the game
   else if (inputNumber === secretNumber) {
@@ -27,7 +27,7 @@ document.querySelector('.check').addEventListener('click', () => {
     displayMessage('🥁 Correct Number');
     let guessed = (document.querySelector('.number').textContent =
       secretNumber);
-    document.querySelector('body').style.background = 'green';
+    document.querySelector('body').style.background = '#bbb';
 
     document.querySelector('.number').style.width = '30rem';
 
