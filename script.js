@@ -69,7 +69,7 @@ document.querySelector('.check').addEventListener('click', () => {
 document.querySelector('.again').addEventListener('click', () => {
   numberOfChange = 20;
   console.log(numberOfChange);
-  let secretNumber = Math.trunc(Math.random() * 20) + 1;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
 
   document.querySelector('.number').textContent = '?';
   document.querySelector('.score').textContent = numberOfChange;
