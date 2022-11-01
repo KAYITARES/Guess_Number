@@ -81,6 +81,32 @@ document.querySelector('.again').addEventListener('click', () => {
   document.querySelector('.guess').value = '';
 });
 
+// for help
+let modal = document.querySelector('.modal');
+let overlay = document.querySelector('.overlay');
+let closeModal = document.querySelector('.close-modal');
+let openModal = document.querySelector('.btn-help');
+
+let OpenModals = () => {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+let removeModal = () => {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+openModal.addEventListener('click', OpenModals);
+closeModal.addEventListener('click', removeModal);
+overlay.addEventListener('click', removeModal);
+
+document.addEventListener('keydown', e => {
+  console.log(e);
+
+  //if we press esc keyboard and modal does not contain a class of hidden close the modal
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    removeModal();
+  }
+});
 // console.log(document.querySelector('.message').textContent);
 // document.querySelector('.guess').value = 20;
 // console.log(document.querySelector('.guess').value);

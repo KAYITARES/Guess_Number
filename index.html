@@ -8,6 +8,18 @@
     <title>Guess My Number!</title>
   </head>
   <body>
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h2>We're here to help you 🙂</h2>
+      <p>
+        A user must predict a number between 1 and 20 on my Guess Number online
+        application. The user is informed that the number is high if it is
+        greater than the secret number (random number), and vice versa. If the
+        user correctly guesses a number and it matches the secret (random
+        number), they win. and the winner gains the points.
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
     <header>
       <h1>Guess My Number!</h1>
       <p class="between">(Between 1 and 20)</p>
@@ -27,6 +39,10 @@
         </p>
       </section>
     </main>
+    <div class="help">
+      <a href="#" class="btn btn-help">🆘️ help</a>
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
